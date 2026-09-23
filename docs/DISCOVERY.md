@@ -21,6 +21,25 @@ This is the launch checklist. **Confirmed** facts ship as written. Everything el
 - [ ] **Facebook page URL** for the footer link.
 - [ ] **Hero film.** Needs Higgsfield credits (the balance was 0.08). Until then the site runs on the designed still hero. Later, replace it with real drone footage.
 
+
+## Confirmed from the existing site (alteraroofservices.ca, Sep 2026)
+The site itself was blocked from the build sandbox, so these facts came from search-engine snippets of it and from the [Yelp listing](https://www.yelp.ca/biz/altera-roof-services-vancouver) and [Instagram](https://www.instagram.com/alteraroofservices/). All are now used on the site (confirmed):
+- Legal name **Altera Roof Services Ltd.** Tagline **"Roofing Done Right, The First Time."**
+- **Repair-first**, specializing in roof leak diagnosis and targeted repairs: "finding the source of leaks, not guessing, patching blindly, or pushing unnecessary replacements."
+- **Red Seal-certified** craftsmanship and **20+ years** of roofing experience.
+- Works on every major roofing system and **all major membrane systems**: new installs, repairs, leak investigations, maintenance, full replacements.
+- Mission: "Altera was built on one idea: do the job right and be straight with people."
+- Values: no shortcuts; no surprises on the invoice; they show up when they say they will; they communicate clearly from first call to final walkthrough; "real accountability, not just a warranty on paper."
+- Service area: **Lower Mainland and Fraser Valley**.
+- Phone: **(604) 441-7876**. This replaces the 555 placeholder.
+- The listing address (11910 220 Street) is deliberately **not** published on the new site. It may be a home address, so ask the owner first.
+
+### Resolved from the blocking list above
+- Phone: done. Service area: done. Facebook: replaced with Instagram in the footer.
+- Email: still unknown. The "Email us" button was removed rather than left pointing at a placeholder.
+- Privacy policy: the existing site's policy couldn't be retrieved. `site/privacy.html` is a new policy written for this site as built: no cookies, no analytics, no forms, and contact by phone or text only. **The owner must review it before launch.** Note that the old site mentions analytics cookies and this one uses none.
+- Still to confirm: that the number accepts texts, and the "free roof check" offer.
+
 ## Open: nice to have
 - [ ] Years in business, crew size, owner name and photo, in their own words, for an About section.
 - [ ] Insurance and WorkSafeBC coverage, and warranty terms. **Do not claim any of these until confirmed.**

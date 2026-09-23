@@ -4,12 +4,12 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Altera Roof Services · Roofing in Coquitlam, BC</title>
-<meta name="description" content="Roofs, leak repairs, flat roofs and moss care in Coquitlam, BC. Every job photographed before and after, so you see every step. Book a free roof check.">
+<meta name="description" content="Repair-first roofing across the Lower Mainland and Fraser Valley. Red Seal certified roofers with 20+ years of experience. Leak diagnosis, repairs, replacements and moss care. Call (604) 441-7876.">
 <meta name="theme-color" content="#0c0f10">
 <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Altera Roof Services · You see every step">
-<meta property="og:description" content="Roofs, leak repairs and moss care in Coquitlam, BC. Photographed before and after.">
+<meta property="og:description" content="Repair-first roofing across the Lower Mainland and Fraser Valley. Roofing done right, the first time.">
 <!-- DEPLOY STEP: replace both with absolute live URLs before zipping -->
 <meta property="og:image" content="assets/aerial-house.jpg">
 <meta property="og:url" content="/">
@@ -37,11 +37,13 @@
 {
   "@context": "https://schema.org",
   "@type": "RoofingContractor",
-  "name": "Altera Roof Services",
+  "name": "Altera Roof Services Ltd.",
+  "slogan": "Roofing Done Right, The First Time.",
+  "telephone": "+1-604-441-7876",
   "logo": "assets/logo-dark.png",
   "image": "assets/aerial-house.jpg",
-  "areaServed": "Coquitlam, BC",
-  "address": { "@type": "PostalAddress", "addressLocality": "Coquitlam", "addressRegion": "BC", "addressCountry": "CA" }
+  "areaServed": ["Lower Mainland, BC", "Fraser Valley, BC"],
+  "sameAs": ["https://www.instagram.com/alteraroofservices/"]
 }
 </script>
 <style>
@@ -104,14 +106,19 @@ p{margin:0}
 .hero{position:relative;padding-top:var(--nav)}
 .stage{position:relative;height:calc(100vh - var(--nav));height:calc(100svh - var(--nav));min-height:560px;overflow:hidden;isolation:isolate}
 .still,.poster{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
-.still{filter:saturate(.72) contrast(1.04)}
+.still{filter:saturate(.7) brightness(.82) contrast(1.06)}
+/* Photos are shot in flat daylight; a shared grade pulls them into the page's dark world. */
+.ph{position:relative;overflow:hidden}
+.ph img{filter:saturate(.82) brightness(.9) contrast(1.05)}
+.ph::after{content:"";position:absolute;inset:0;pointer-events:none;background:radial-gradient(ellipse 85% 80% at 50% 45%,rgba(12,15,16,0) 50%,rgba(12,15,16,.5) 100%),linear-gradient(180deg,rgba(12,15,16,0) 60%,rgba(12,15,16,.32) 100%)}
 .poster{background:center/cover no-repeat;opacity:0}
 .stage.has-poster .poster{opacity:1}
 #film{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transform:translateZ(0);transition:opacity .8s var(--ease)}
 .stage.video-ready #film{opacity:1}
 .shade{position:absolute;inset:0;pointer-events:none;background:
-  linear-gradient(180deg,rgba(12,15,16,.35) 0%,rgba(12,15,16,0) 28%,rgba(12,15,16,.15) 52%,rgba(12,15,16,.86) 100%),
-  linear-gradient(90deg,rgba(12,15,16,.55) 0%,rgba(12,15,16,0) 60%)}
+  radial-gradient(ellipse 90% 85% at 60% 40%,rgba(12,15,16,0) 40%,rgba(12,15,16,.55) 100%),
+  linear-gradient(180deg,rgba(12,15,16,.45) 0%,rgba(12,15,16,.08) 26%,rgba(12,15,16,.22) 50%,rgba(12,15,16,.9) 100%),
+  linear-gradient(90deg,rgba(12,15,16,.6) 0%,rgba(12,15,16,0) 62%)}
 .hero-copy{position:absolute;left:0;right:0;bottom:0;z-index:3}
 .hero-copy .wrap{padding-bottom:clamp(28px,5vh,56px)}
 .hero h1{font-size:clamp(2.6rem,6vw,5.75rem);max-width:13ch}
@@ -182,6 +189,9 @@ html.js:not(.rm) .h-after{position:absolute;inset:0;clip-path:inset(0 calc((1 - 
 .sweep{display:none}
 html.js:not(.rm) .sweep{display:block;position:absolute;top:0;bottom:0;left:0;width:1px;background:var(--text);transform:translate3d(calc(var(--hx,0) * 1px),0,0);opacity:calc(var(--h,0) * (1 - var(--h,0)) * 4)}
 .hold-frame .h-before,.hold-frame .h-after{grid-row:1}
+.hold-frame img{filter:saturate(.82) brightness(.9) contrast(1.05)}
+.hold-frame::after{content:"";position:absolute;inset:0;z-index:1;pointer-events:none;background:radial-gradient(ellipse 85% 80% at 50% 45%,rgba(12,15,16,0) 50%,rgba(12,15,16,.5) 100%),linear-gradient(180deg,rgba(12,15,16,0) 60%,rgba(12,15,16,.3) 100%)}
+html.js:not(.rm) .sweep{z-index:2}
 .grid{display:grid;grid-template-columns:repeat(12,1fr);gap:1px;background:var(--rule);border:1px solid var(--rule);border-radius:var(--r);overflow:hidden;margin-top:clamp(64px,9vw,120px)}
 .cell{background:var(--ink);margin:0;display:grid;grid-template-rows:auto 1fr}
 .cell img{width:100%;height:100%;object-fit:cover}
@@ -192,14 +202,29 @@ html.js:not(.rm) .sweep{display:block;position:absolute;top:0;bottom:0;left:0;wi
 .grid-note{grid-column:1/-1;background:var(--ink);padding:14px;display:flex;justify-content:space-between;color:var(--text-2)}
 @media (max-width:860px){.work-top{grid-template-columns:1fr}.c6,.c7,.c5{grid-column:1/-1}}
 
-/* 03 process: three columns split by vertical rules */
-.steps{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--rule-ink)}
+/* 03 about: one statement, the facts beside it, four promises below */
+.about-grid{display:grid;grid-template-columns:minmax(0,8fr) minmax(0,4fr);gap:clamp(32px,6vw,96px);align-items:end}
+.statement{font:500 clamp(1.9rem,3.6vw,3.4rem)/1.08 var(--sans);letter-spacing:-.03em;font-stretch:94%;max-width:20ch}
+.statement .muted{color:var(--ink-2)}
+.facts{list-style:none;margin:0;padding:0;border-top:1px solid var(--rule-ink)}
+.facts li{display:flex;justify-content:space-between;gap:16px;padding:12px 0;border-bottom:1px solid var(--rule-ink)}
+.facts li span:last-child{color:var(--ink-2);text-align:right}
+.promises{display:grid;grid-template-columns:repeat(4,1fr);margin-top:clamp(56px,8vw,110px);border-top:1px solid var(--rule-ink)}
+.promise{padding:22px clamp(14px,2vw,28px) 0 0;display:grid;gap:10px;align-content:start}
+.promise+.promise{padding-left:clamp(14px,2vw,28px);border-left:1px solid var(--rule-ink)}
+.promise h3{font-size:1.3rem;letter-spacing:-.02em}
+.promise p{color:var(--ink-2);font-size:.98rem}
+@media (max-width:900px){.about-grid{grid-template-columns:1fr}.promises{grid-template-columns:1fr 1fr}.promise:nth-child(3){padding-left:0;border-left:0}.promise:nth-child(n+3){border-top:1px solid var(--rule-ink);margin-top:22px}}
+@media (max-width:520px){.promises{grid-template-columns:1fr}.promise+.promise{padding-left:0;border-left:0;border-top:1px solid var(--rule-ink);margin-top:22px}}
+
+/* 04 process: three columns split by vertical rules */
+.steps{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--rule)}
 .step{padding:28px clamp(16px,2.4vw,36px) 8px 0;display:grid;gap:14px;align-content:start}
-.step+.step{padding-left:clamp(16px,2.4vw,36px);border-left:1px solid var(--rule-ink)}
+.step+.step{padding-left:clamp(16px,2.4vw,36px);border-left:1px solid var(--rule)}
 .step h3{font-size:clamp(1.5rem,2.3vw,2rem);letter-spacing:-.025em;max-width:14ch}
-.step p{color:var(--ink-2);max-width:32ch}
+.step p{color:var(--text-2);max-width:32ch}
 .proc-head{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:32px;align-items:end;margin-bottom:clamp(40px,6vw,72px)}
-@media (max-width:860px){.steps{grid-template-columns:1fr}.step+.step{padding-left:0;border-left:0;border-top:1px solid var(--rule-ink)}.proc-head{grid-template-columns:1fr}}
+@media (max-width:860px){.steps{grid-template-columns:1fr}.step+.step{padding-left:0;border-left:0;border-top:1px solid var(--rule)}.proc-head{grid-template-columns:1fr}}
 
 /* 04 faq */
 .faq-grid{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(32px,6vw,96px)}
@@ -212,12 +237,14 @@ summary i::before,summary i::after{content:"";position:absolute;left:0;right:0;t
 summary i::after{transform:rotate(90deg)}
 details[open] summary i::after{transform:rotate(0)}
 details p{color:var(--text-2);padding:0 0 24px;max-width:56ch}
+.on-fog details,.on-fog details:first-child{border-color:var(--rule-ink)}
+.on-fog details p{color:var(--ink-2)}
 @media (max-width:860px){.faq-grid{grid-template-columns:1fr}}
 
 /* 05 contact: full-bleed image, one decision */
 .cta{position:relative;overflow:hidden;isolation:isolate;min-height:88vh;display:grid;align-items:end}
-.cta>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2;filter:saturate(.6)}
-.cta::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(12,15,16,.72) 0%,rgba(12,15,16,.55) 40%,rgba(12,15,16,.94) 100%)}
+.cta>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2;filter:saturate(.55) brightness(.8)}
+.cta::before{content:"";position:absolute;inset:0;z-index:-1;background:radial-gradient(ellipse 90% 80% at 50% 40%,rgba(12,15,16,0) 30%,rgba(12,15,16,.6) 100%),linear-gradient(180deg,rgba(12,15,16,.78) 0%,rgba(12,15,16,.6) 40%,rgba(12,15,16,.95) 100%)}
 .cta .wrap{width:100%;padding-top:clamp(80px,10vw,140px);padding-bottom:clamp(40px,6vw,72px)}
 .cta h2{font-size:clamp(2.6rem,6vw,5.75rem);max-width:12ch}
 .cta-row{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:clamp(28px,5vw,80px);align-items:end;margin-top:28px}
@@ -265,6 +292,7 @@ html.rm{scroll-behavior:auto}
     <ul>
       <li><a href="#services">Services</a></li>
       <li><a href="#work">Work</a></li>
+      <li><a href="#about">About</a></li>
       <li><a href="#process">Process</a></li>
       <li><a href="#faq">FAQ</a></li>
     </ul>
@@ -281,7 +309,7 @@ html.rm{scroll-behavior:auto}
       <div class="shade" aria-hidden="true"></div>
       <svg class="ring" viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="20" fill="none" stroke="currentColor" stroke-opacity=".2" stroke-width="2"/><circle cx="24" cy="24" r="20" fill="none" stroke="currentColor" stroke-width="2" stroke-dasharray="126" style="stroke-dashoffset:var(--ld,126)" transform="rotate(-90 24 24)"/></svg>
 
-      <div class="label-top"><div class="wrap mono"><span>Coquitlam, British Columbia</span><span>Roofs · Repairs · Moss care</span></div></div>
+      <div class="label-top"><div class="wrap mono"><span>Red Seal certified · 20+ years</span><span>Lower Mainland &amp; Fraser Valley</span></div></div>
 
       <div class="band b1" data-a="0" data-b="0.22" data-first><p class="split">Built for the rain.</p></div>
       <div class="band b2" data-a="0.26" data-b="0.48"><p class="split">Almost two metres of it a year.</p><small>Your roof takes every drop.</small></div>
@@ -290,7 +318,7 @@ html.rm{scroll-behavior:auto}
       <div class="hero-copy" id="hero-copy">
         <div class="wrap">
           <h1>You see every step.</h1>
-          <p class="sub">Roofs, leak repairs and moss care in Coquitlam. Photographed before and after, so you know exactly what was done.</p>
+          <p class="sub">Repair-first roofing across the Lower Mainland and Fraser Valley. We find the source, fix it right the first time, and show you the photos.</p>
           <div class="ctas">
             <a class="btn btn-solid" href="#contact">Book a free roof check</a>
             <a class="btn btn-line" href="#work">See the work</a>
@@ -308,14 +336,14 @@ html.rm{scroll-behavior:auto}
 
   <section class="sec on-fog" id="services" aria-labelledby="svc-h">
     <div class="wrap">
-      <div class="idx mono"><span>01 / Services</span><span class="muted">What we do</span></div>
+      <div class="idx mono"><span>01 / Services</span><span class="muted">Every major roofing system</span></div>
       <div class="svc-grid">
         <h2 id="svc-h" class="rv">Four kinds of work. One standard.</h2>
         <ol class="svc-list stagger">
-          <li style="--i:0"><span class="mono">01</span><h3>Leak repair<span class="flag mono">Call first</span></h3><p>Water coming in? Call us. We find where it gets in, fix it, and show you the photos.</p></li>
-          <li style="--i:1"><span class="mono">02</span><h3>Shingle roofs</h3><p>New roofs and re-roofs for houses and garages. Clean lines and tight flashing.</p></li>
-          <li style="--i:2"><span class="mono">03</span><h3>Flat roofs</h3><p>Membrane roofs, skylight curbs and rooftop details on flat and commercial buildings.</p></li>
-          <li style="--i:3"><span class="mono">04</span><h3>Moss and maintenance</h3><p>Moss loves a Coquitlam roof. We clear it and keep an eye on the roof between big jobs.</p></li>
+          <li style="--i:0"><span class="mono">01</span><h3>Leak repair<span class="flag mono">Our specialty</span></h3><p>Leak investigations that find the source. No guessing, no blind patching, no replacement you don't need.</p></li>
+          <li style="--i:1"><span class="mono">02</span><h3>Shingle roofs</h3><p>Targeted repairs, new installs and full replacements when a roof has truly reached the end.</p></li>
+          <li style="--i:2"><span class="mono">03</span><h3>Flat roofs</h3><p>All major membrane systems, plus skylight curbs and rooftop details on flat and commercial buildings.</p></li>
+          <li style="--i:3"><span class="mono">04</span><h3>Moss and maintenance</h3><p>Moss loves a wet West Coast roof. We clear it and keep the roof in shape between big jobs.</p></li>
         </ol>
       </div>
     </div>
@@ -344,28 +372,49 @@ html.rm{scroll-behavior:auto}
 
       <div class="grid stagger">
         <figure class="cell c6" style="--i:0">
-          <img src="assets/curb-before.jpg" width="1244" height="521" loading="lazy" decoding="async" alt="Before: a rusted, broken metal skylight curb on a flat membrane roof.">
+          <div class="ph"><img src="assets/curb-before.jpg" width="1244" height="521" loading="lazy" decoding="async" alt="Before: a rusted, broken metal skylight curb on a flat membrane roof."></div>
           <figcaption class="mono"><b>Before</b><span>Skylight curb, rusted through</span></figcaption>
         </figure>
         <figure class="cell c6" style="--i:1">
-          <img src="assets/curb-after.jpg" width="1244" height="521" loading="lazy" decoding="async" alt="After: the skylight curb rebuilt and wrapped in new dark cap sheet with a clean flashing apron.">
+          <div class="ph"><img src="assets/curb-after.jpg" width="1244" height="521" loading="lazy" decoding="async" alt="After: the skylight curb rebuilt and wrapped in new dark cap sheet with a clean flashing apron."></div>
           <figcaption class="mono"><b>After</b><span>Rebuilt and sealed</span></figcaption>
         </figure>
         <figure class="cell c7" style="--i:2">
-          <img src="assets/aerial-house.jpg" width="1260" height="708" loading="lazy" decoding="async" alt="Drone view of a finished charcoal shingle roof with two skylights on an L-shaped house.">
+          <div class="ph"><img src="assets/aerial-house.jpg" width="1260" height="708" loading="lazy" decoding="async" alt="Drone view of a finished charcoal shingle roof with two skylights on an L-shaped house."></div>
           <figcaption class="mono"><b>From the air</b><span>Charcoal shingles, two skylights</span></figcaption>
         </figure>
         <figure class="cell c5" style="--i:3">
-          <img src="assets/aerial-garage.jpg" width="1254" height="708" loading="lazy" decoding="async" alt="Drone view of a finished charcoal shingle roof on a detached garage, with the crew below.">
+          <div class="ph"><img src="assets/aerial-garage.jpg" width="1254" height="708" loading="lazy" decoding="async" alt="Drone view of a finished charcoal shingle roof on a detached garage, with the crew below."></div>
           <figcaption class="mono"><b>From the air</b><span>Garage re-roof</span></figcaption>
         </figure>
       </div>
     </div>
   </section>
 
-  <section class="sec on-fog" id="process" aria-labelledby="proc-h">
+  <section class="sec on-fog" id="about" aria-labelledby="about-h">
     <div class="wrap">
-      <div class="idx mono"><span>03 / Process</span><span class="muted">How it goes</span></div>
+      <div class="idx mono"><span>03 / Why Altera</span><span class="muted">Roofing done right, the first time</span></div>
+      <div class="about-grid">
+        <h2 id="about-h" class="statement rv">Altera was built on one idea: do the job right and be straight with people. <span class="muted">Repair-first. We find the source instead of guessing, patching blindly, or pushing a replacement you don't need.</span></h2>
+        <ul class="facts mono rv">
+          <li><span>Certification</span><span>Red Seal</span></li>
+          <li><span>Experience</span><span>20+ years</span></li>
+          <li><span>Systems</span><span>Every major one</span></li>
+          <li><span>Area</span><span>Lower Mainland &amp; Fraser Valley</span></li>
+        </ul>
+      </div>
+      <div class="promises stagger">
+        <div class="promise" style="--i:0"><span class="mono">01</span><h3>No shortcuts.</h3><p>The job gets done properly, even the parts nobody will see.</p></div>
+        <div class="promise" style="--i:1"><span class="mono">02</span><h3>No surprises on the invoice.</h3><p>What we quote is what you see on the invoice.</p></div>
+        <div class="promise" style="--i:2"><span class="mono">03</span><h3>We show up when we say we will.</h3><p>Clear communication from the first call to the final walkthrough.</p></div>
+        <div class="promise" style="--i:3"><span class="mono">04</span><h3>Real accountability.</h3><p>We stand behind our work, not just a warranty on paper.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="process" aria-labelledby="proc-h">
+    <div class="wrap">
+      <div class="idx mono"><span>04 / Process</span><span class="muted">How it goes</span></div>
       <div class="proc-head">
         <h2 id="proc-h" class="rv">Three steps. You see all of them.</h2>
         <span class="ridgeline" aria-hidden="true"><svg viewBox="0 0 1200 90" preserveAspectRatio="none"><path pathLength="1" d="M0 84L600 8L1200 84"/><path pathLength="1" d="M90 90L600 30L1110 90"/></svg></span>
@@ -378,18 +427,19 @@ html.rm{scroll-behavior:auto}
     </div>
   </section>
 
-  <section class="sec" id="faq" aria-labelledby="faq-h">
+  <section class="sec on-fog" id="faq" aria-labelledby="faq-h">
     <div class="wrap">
-      <div class="idx mono"><span>04 / Questions</span><span class="muted">Straight answers</span></div>
+      <div class="idx mono"><span>05 / Questions</span><span class="muted">Straight answers</span></div>
       <div class="faq-grid">
         <h2 id="faq-h" class="rv">What people ask first.</h2>
         <div class="rv">
           <!-- TODO: owner to approve every answer before launch (see docs/DISCOVERY.md) -->
-          <details><summary>Will you actually call me back?<i aria-hidden="true"></i></summary><p>Yes. Call or text and a real person gets back to you. If we can't take the job, we'll tell you straight.</p></details>
-          <details><summary>Do I need a new roof, or just moss removal?<i aria-hidden="true"></i></summary><p>Not always a new roof. We go up, take photos, and tell you what it needs. Sometimes that's a clean and a treatment. Sometimes it's more.</p></details>
+          <details><summary>Will you actually call me back?<i aria-hidden="true"></i></summary><p>Yes. We communicate clearly from the first call to the final walkthrough, and we show up when we say we will. If we can't take the job, we'll tell you straight.</p></details>
+          <details><summary>Do I need a new roof, or just moss removal?<i aria-hidden="true"></i></summary><p>Often not. We're repair-first: we find the source of the problem and fix that. We only recommend a replacement when the roof has truly reached the end.</p></details>
           <details><summary>I have a leak right now. What do I do?<i aria-hidden="true"></i></summary><p>Call us. If you can, put a bucket under the drip and move anything valuable out of the way. We'll take it from there.</p></details>
-          <details><summary>Do you do flat and commercial roofs?<i aria-hidden="true"></i></summary><p>Yes. Membrane roofs, skylight curbs and rooftop details. The skylight curb above is one of ours.</p></details>
-          <details><summary>Where do you work?<i aria-hidden="true"></i></summary><p>Coquitlam and the area around it. Not sure if we cover you? Ask.</p></details>
+          <details><summary>Do you do flat and commercial roofs?<i aria-hidden="true"></i></summary><p>Yes. We work across all major membrane systems, plus skylight curbs and rooftop details. The skylight curb above is one of ours.</p></details>
+          <details><summary>Are your roofers certified?<i aria-hidden="true"></i></summary><p>Yes. Our roofers are Red Seal certified and bring more than 20 years of roofing experience to every job.</p></details>
+          <details><summary>Where do you work?<i aria-hidden="true"></i></summary><p>Across the Lower Mainland and the Fraser Valley, Coquitlam included. Not sure if we cover you? Call and ask.</p></details>
         </div>
       </div>
     </div>
@@ -400,11 +450,11 @@ html.rm{scroll-behavior:auto}
   <section class="cta" id="contact" aria-labelledby="cta-h">
     <img src="assets/aerial-garage.jpg" width="1254" height="708" alt="" loading="lazy" decoding="async">
     <div class="wrap">
-      <div class="idx mono"><span>05 / Contact</span><span class="muted">Free roof check</span></div>
+      <div class="idx mono"><span>06 / Contact</span><span class="muted">Free roof check</span></div>
       <h2 id="cta-h" class="rv">Book a free roof check.</h2>
       <div class="cta-row">
         <div class="rv">
-          <p class="lead">Tell us what you're seeing. We'll come out, go up, and send you the photos.</p>
+          <p class="lead">Tell us what you're seeing. We'll come out, find the source, and send you the photos.</p>
           <ul class="check mono">
             <li><span>01</span>Your address</li>
             <li><span>02</span>What you're seeing: a leak, moss, or an old roof</li>
@@ -412,12 +462,12 @@ html.rm{scroll-behavior:auto}
           </ul>
         </div>
         <div class="actions rv">
-          <!-- TODO: phone. 604-555-0142 is a reserved fictional number; replace before launch -->
-          <a class="btn btn-solid" href="tel:+16045550142">Call 604-555-0142 <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
-          <a class="btn btn-line" href="sms:+16045550142">Text us <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
-          <!-- TODO: email. Placeholder address; replace before launch -->
-          <a class="btn btn-line" href="mailto:hello@example.com?subject=Free%20roof%20check">Email us <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
-          <p class="note mono">No form. Calls, texts and emails reach us directly.</p>
+          <a class="btn btn-solid" href="tel:+16044417876">Call (604) 441-7876 <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
+          <!-- TODO: confirm (604) 441-7876 accepts texts -->
+          <a class="btn btn-line" href="sms:+16044417876">Text us <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
+          <!-- TODO: add an "Email us" button once the business email is confirmed -->
+          <a class="btn btn-line" href="https://www.instagram.com/alteraroofservices/" target="_blank" rel="noopener">See more on Instagram <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
+          <p class="note mono">No form. Calls and texts reach us directly.</p>
         </div>
       </div>
     </div>
@@ -428,12 +478,12 @@ html.rm{scroll-behavior:auto}
   <div class="wrap foot">
     <img src="assets/logo-light.png" width="960" height="724" alt="Altera Roof Services">
     <address class="mono">
-      <span>Coquitlam, British Columbia</span>
-      <a href="tel:+16045550142">604-555-0142</a>
-      <!-- TODO: Facebook page URL -->
-      <a href="https://www.facebook.com/" rel="noopener" target="_blank">Facebook</a>
+      <span>Lower Mainland &amp; Fraser Valley, BC</span>
+      <a href="tel:+16044417876">(604) 441-7876</a>
+      <a href="https://www.instagram.com/alteraroofservices/" rel="noopener" target="_blank">Instagram</a>
+      <a href="privacy.html">Privacy</a>
     </address>
-    <p class="mono muted">© 2026 Altera Roof Services</p>
+    <p class="mono muted">© 2026 Altera Roof Services Ltd.</p>
   </div>
 </footer>
 
