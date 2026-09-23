@@ -36,8 +36,8 @@ The site itself was blocked from the build sandbox, so these facts came from sea
 
 ### Resolved from the blocking list above
 - Phone: done. Service area: done. Facebook: replaced with Instagram in the footer.
-- Email: still unknown. The "Email us" button was removed rather than left pointing at a placeholder.
-- Privacy policy: the existing site's policy couldn't be retrieved. `site/privacy.html` is a new policy written for this site as built: no cookies, no analytics, no forms, and contact by phone or text only. **The owner must review it before launch.** Note that the old site mentions analytics cookies and this one uses none.
+- Email: **info@alteraroofservices.ca** (confirmed, from the owner's privacy policy). It's now in the contact section, the footer and the JSON-LD.
+- Privacy policy: the owner supplied the live policy (effective Aug 8, 2026), and `site/privacy.html` now uses it verbatim. **Open item:** it says the website uses the Meta Pixel, but the new site doesn't have the Pixel installed yet. Add it (needs the pixel ID) or reword that sentence.
 - Still to confirm: that the number accepts texts, and the "free roof check" offer.
 
 ## Open: nice to have
