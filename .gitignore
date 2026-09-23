@@ -1,0 +1,3 @@
+# Scratch frame extractions used for video-gate inspection; reproducible from the raw mp4s in review/
+review/frames_full*/
+review/frame*.jpg
