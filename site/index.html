@@ -18,7 +18,7 @@
   /* Runs before first paint. FILM flips to true once assets/hero-scrub.mp4 exists;
      until then every visitor gets the composed still hero. */
   (function (d) {
-    var FILM = false;
+    var FILM = true;
     var h = d.documentElement, mm = window.matchMedia;
     h.classList.add('js');
     var GATES = [
@@ -304,7 +304,7 @@ html.rm{scroll-behavior:auto}
 <main id="main" tabindex="-1">
   <section class="hero" id="top" aria-label="Introduction">
     <div class="stage" id="stage">
-      <img class="still" src="assets/aerial-house.jpg" width="1260" height="708" alt="" fetchpriority="high">
+      <img class="still" src="assets/hero-ending.jpg" width="1920" height="1084" alt="" fetchpriority="high">
       <div class="poster" aria-hidden="true"></div>
       <video id="film" muted playsinline preload="none" aria-hidden="true" tabindex="-1"></video>
       <div class="shade" aria-hidden="true"></div>
@@ -493,7 +493,7 @@ html.rm{scroll-behavior:auto}
   'use strict';
   var VIDEO_URL = 'assets/hero-scrub.mp4';
   var POSTER_URL = 'assets/hero-poster.jpg';
-  var VIDEO_BYTES = 6000000;   /* set to the real byte size once the film exists */
+  var VIDEO_BYTES = 3474769;   /* real size of assets/hero-scrub.mp4 */
 
   var root = document.documentElement, mm = window.matchMedia, RM = '(prefers-reduced-motion: reduce)';
   var stage = document.getElementById('stage'), hero = document.getElementById('top');
