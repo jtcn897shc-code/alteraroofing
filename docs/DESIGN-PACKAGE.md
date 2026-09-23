@@ -1,5 +1,13 @@
 # Altera Roof Services: design package (Tier 1)
 
+> **v2 redesign (Sep 2026):** the client's feedback was "better fonts, no AI slop", with Andercore ("steel blueprint at midnight") as the reference. The look is now:
+> - Monochrome: near-black `#0c0f10` and fog `#eceeeb` bands, off-white `#f2f3f1` as the only "accent". The client chose "White only", so there is no colour accent.
+> - Instrument Sans (sentence case, -0.03em display) with Space Mono 12px labels.
+> - 4px corners, 1px rules, numbered sections (`01 / Services`...).
+> - The hero is a full-bleed photo/film with the headline bottom-left.
+> - The palette and type sections below are v1 and are superseded by the tokens in `site/index.html`. All copy below still ships verbatim, except that the hero band 2 line is now "Almost two metres of it a year."
+
+
 Every line of copy here ships verbatim in `site/index.html`. Band ranges are starting points, validated by the flick test once the film exists.
 
 ## 1. Brand premise
